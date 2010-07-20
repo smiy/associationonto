@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+   xmlns:ao="http://purl.org/ontology/ao/core#"
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:dcterms="http://purl.org/dc/terms/"
+   xmlns:owl="http://www.w3.org/2002/07/owl#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+   xmlns:sim="http://purl.org/ontology/similarity/"
+   xmlns:vs="http://www.w3.org/2003/06/sw-vocab-status/ns#"
+   xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+   xml:base="http://purl.org/ontology/ao/core#">
+  <owl:Ontology rdf:about="http://purl.org/ontology/ao/core#">
+    <dc:creator rdf:resource="http://foaf.me/zazi#me"/>
+    <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2010-07-20T14:44:52+01:00</dc:date>
+    <dc:description xml:lang="en">The Association Ontology specification provides basic properties 
+for describing a associations to something, e.g. an occasion, a genre ar a mood 
+on/ for the Semantic Web. This document contains a RDF description of the Association Ontology.</dc:description>
+    <dc:title xml:lang="en">The Association Ontology</dc:title>
+    <owl:imports rdf:resource="http://purl.org/dc/elements/1.1/"/>
+    <owl:imports rdf:resource="http://purl.org/dc/terms/"/>
+    <owl:imports rdf:resource="http://purl.org/ontology/similarity/"/>
+    <owl:imports rdf:resource="http://www.w3.org/2003/06/sw-vocab-status/ns"/>
+    <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.1</owl:versionInfo>
+  </owl:Ontology>
+  <owl:ObjectProperty rdf:about="http://purl.org/ontology/ao/core#association">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An association property to related associations to something, e.g. a association that includes an ao:mood, an ao:genre and an ao:occasion.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/ontology/ao/core#"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">association</rdfs:label>
+    <rdfs:range rdf:resource="http://purl.org/ontology/similarity/Association"/>
+    <vs:term_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">testing</vs:term_status>
+  </owl:ObjectProperty>
+  <rdf:Property rdf:about="http://purl.org/ontology/ao/core#genre">
+    <rdfs:comment xml:lang="en">An genre of something.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/ontology/ao/core#"/>
+    <rdfs:label xml:lang="en">has genre</rdfs:label>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/subject"/>
+    <owl:inverseOf>
+      <rdf:Property>
+        <rdfs:label xml:lang="en">is genre of</rdfs:label>
+      </rdf:Property>
+    </owl:inverseOf>
+    <vs:term_status xml:lang="en">unstable</vs:term_status>
+  </rdf:Property>
+  <owl:ObjectProperty rdf:about="http://purl.org/ontology/ao/core#likeminded">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Associates likeminded people to an association, which they like/ agree with.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://purl.org/ontology/similarity/Association"/>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/ontology/ao/core#"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">has likeminded</rdfs:label>
+    <rdfs:range rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
+    <vs:term_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">testing</vs:term_status>
+  </owl:ObjectProperty>
+  <rdf:Property rdf:about="http://purl.org/ontology/ao/core#mood">
+    <rdfs:comment xml:lang="en">A mood that should be created by something.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/ontology/ao/core#"/>
+    <rdfs:label xml:lang="en">has mood</rdfs:label>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/subject"/>
+    <owl:inverseOf>
+      <rdf:Property>
+        <rdfs:label xml:lang="en">is mood of</rdfs:label>
+      </rdf:Property>
+    </owl:inverseOf>
+    <vs:term_status xml:lang="en">unstable</vs:term_status>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://purl.org/ontology/ao/core#occasion">
+    <rdfs:comment xml:lang="en">An occasion for which something was created.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/ontology/ao/core#"/>
+    <rdfs:label xml:lang="en">has occassion</rdfs:label>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/subject"/>
+    <owl:inverseOf>
+      <rdf:Property>
+        <rdfs:label xml:lang="en">is occassion of</rdfs:label>
+      </rdf:Property>
+    </owl:inverseOf>
+    <vs:term_status xml:lang="en">unstable</vs:term_status>
+  </rdf:Property>
+</rdf:RDF>
