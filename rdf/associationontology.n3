@@ -1,8 +1,9 @@
-# Saved by TopBraid on Wed Jul 21 19:39:23 CEST 2010
+# Saved by TopBraid on Wed Jul 21 20:29:33 CEST 2010
 # baseURI: http://purl.org/ontology/ao/core#
 # imports: http://purl.org/dc/elements/1.1/
 # imports: http://purl.org/ontology/similarity/
 # imports: http://www.w3.org/2003/06/sw-vocab-status/ns
+# imports: http://purl.org/stuff/rev
 # imports: http://purl.org/dc/terms/
 
 @prefix ao:      <http://purl.org/ontology/ao/core#> .
@@ -11,6 +12,7 @@
 @prefix owl:     <http://www.w3.org/2002/07/owl#> .
 @prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rev:     <http://purl.org/stuff/rev#> .
 @prefix sim:     <http://purl.org/ontology/similarity/> .
 @prefix vs:      <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
 @prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
@@ -22,8 +24,17 @@ ao:   rdf:type owl:Ontology ;
 for describing a associations to something, e.g. an occasion, a genre ar a mood 
 on/ for the Semantic Web. This document contains a RDF description of the Association Ontology."""@en ;
       dc:title "The Association Ontology"@en ;
-      owl:imports dcterms: , dc: , <http://www.w3.org/2003/06/sw-vocab-status/ns> , sim: ;
+      owl:imports dcterms: , <http://purl.org/stuff/rev> , dc: , <http://www.w3.org/2003/06/sw-vocab-status/ns> , sim: ;
       owl:versionInfo 0.2 .
+
+ao:LikeableAssociation
+      rdf:type owl:Class ;
+      rdfs:comment """A likeable association. That means this association type is intended to be used for voting (ao:likeminded), 
+feedbacking (rev:Feedback), reviewing (e.g. rev:rating) an association statement (related by ao:included_association) in the 
+context of something."""@en ;
+      rdfs:label "Likeable Association"@en ;
+      rdfs:subClassOf rev:Review , sim:Association ;
+      vs:term_status "testing"@en .
 
 ao:genre
       rdf:type rdf:Property ;
@@ -55,10 +66,14 @@ in a specific context."""@en ;
 ao:likeminded
       rdf:type owl:ObjectProperty ;
       rdfs:comment "Associates likeminded people to an association, which they like/ agree with."^^xsd:string ;
-      rdfs:domain sim:Association ;
+      rdfs:domain ao:LikeableAssociation ;
       rdfs:isDefinedBy ao: ;
       rdfs:label "has likeminded"^^xsd:string ;
       rdfs:range <http://xmlns.com/foaf/0.1/Agent> ;
+      owl:inverseOf
+              [ rdf:type owl:ObjectProperty ;
+                rdfs:label "is likeminded of"
+              ] ;
       vs:term_status "testing"^^xsd:string .
 
 ao:mood
