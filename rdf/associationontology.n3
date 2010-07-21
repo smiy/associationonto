@@ -1,4 +1,4 @@
-# Saved by TopBraid on Tue Jul 20 16:11:40 CEST 2010
+# Saved by TopBraid on Wed Jul 21 19:39:23 CEST 2010
 # baseURI: http://purl.org/ontology/ao/core#
 # imports: http://purl.org/dc/elements/1.1/
 # imports: http://purl.org/ontology/similarity/
@@ -17,22 +17,13 @@
 
 ao:   rdf:type owl:Ontology ;
       dc:creator <http://foaf.me/zazi#me> ;
-      dc:date "2010-07-20T14:44:52+01:00"^^xsd:dateTime ;
+      dc:date "2010-07-21T18:31:52+01:00"^^xsd:dateTime ;
       dc:description """The Association Ontology specification provides basic properties 
 for describing a associations to something, e.g. an occasion, a genre ar a mood 
 on/ for the Semantic Web. This document contains a RDF description of the Association Ontology."""@en ;
       dc:title "The Association Ontology"@en ;
       owl:imports dcterms: , dc: , <http://www.w3.org/2003/06/sw-vocab-status/ns> , sim: ;
-      owl:versionInfo 0.1 .
-
-ao:association
-      rdf:type owl:ObjectProperty ;
-      rdfs:comment "An association property to related associations to something, e.g. a association that includes an ao:mood, an ao:genre and an ao:occasion."^^xsd:string ;
-      rdfs:domain owl:Thing ;
-      rdfs:isDefinedBy ao: ;
-      rdfs:label "association"^^xsd:string ;
-      rdfs:range sim:Association ;
-      vs:term_status "testing"^^xsd:string .
+      owl:versionInfo 0.2 .
 
 ao:genre
       rdf:type rdf:Property ;
@@ -46,6 +37,20 @@ ao:genre
                 rdfs:label "is genre of"@en
               ] ;
       vs:term_status "unstable"@en .
+
+ao:included_association
+      rdf:type owl:ObjectProperty ;
+      rdfs:comment """This property could be used to compose association statements or to reuse them, e.g. to make them likeable 
+in a specific context."""@en ;
+      rdfs:domain sim:Association ;
+      rdfs:isDefinedBy ao: ;
+      rdfs:label "has included association"@en ;
+      rdfs:range sim:Association ;
+      owl:inverseOf
+              [ rdf:type owl:ObjectProperty ;
+                rdfs:label "is included association of"
+              ] ;
+      vs:term_status "testing"@en .
 
 ao:likeminded
       rdf:type owl:ObjectProperty ;
