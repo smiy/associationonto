@@ -5,7 +5,6 @@ Version 0.2 (July 2010)
  * ADDED: ao:included_association - to enable the composition of association statements or to reuse them, e.g. to make 
           them likeable in a specific context
  * ADDED: ao:LikeableAssociation - to enable voting, reviewing, feedbacking on association statements in a specific context
- * MODIFIED: ao:likeminded - changed domain to ao:LikeableAssociation
 
 =========================
 Version 0.1 (July 2010)

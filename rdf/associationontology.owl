@@ -63,7 +63,7 @@ in a specific context.</rdfs:comment>
   </owl:ObjectProperty>
   <owl:ObjectProperty rdf:about="http://purl.org/ontology/ao/core#likeminded">
     <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Associates likeminded people to an association, which they like/ agree with.</rdfs:comment>
-    <rdfs:domain rdf:resource="http://purl.org/ontology/ao/core#LikeableAssociation"/>
+    <rdfs:domain rdf:resource="http://purl.org/ontology/similarity/Association"/>
     <rdfs:isDefinedBy rdf:resource="http://purl.org/ontology/ao/core#"/>
     <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">has likeminded</rdfs:label>
     <rdfs:range rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>

@@ -1,4 +1,4 @@
-# Saved by TopBraid on Wed Jul 21 20:29:33 CEST 2010
+# Saved by TopBraid on Wed Jul 21 20:37:37 CEST 2010
 # baseURI: http://purl.org/ontology/ao/core#
 # imports: http://purl.org/dc/elements/1.1/
 # imports: http://purl.org/ontology/similarity/
@@ -66,7 +66,7 @@ in a specific context."""@en ;
 ao:likeminded
       rdf:type owl:ObjectProperty ;
       rdfs:comment "Associates likeminded people to an association, which they like/ agree with."^^xsd:string ;
-      rdfs:domain ao:LikeableAssociation ;
+      rdfs:domain sim:Association ;
       rdfs:isDefinedBy ao: ;
       rdfs:label "has likeminded"^^xsd:string ;
       rdfs:range <http://xmlns.com/foaf/0.1/Agent> ;
