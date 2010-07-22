@@ -1,4 +1,4 @@
-# Saved by TopBraid on Wed Jul 21 20:37:37 CEST 2010
+# Saved by TopBraid on Thu Jul 22 19:57:32 CEST 2010
 # baseURI: http://purl.org/ontology/ao/core#
 # imports: http://purl.org/dc/elements/1.1/
 # imports: http://purl.org/ontology/similarity/
@@ -33,7 +33,7 @@ ao:LikeableAssociation
 feedbacking (rev:Feedback), reviewing (e.g. rev:rating) an association statement (related by ao:included_association) in the 
 context of something."""@en ;
       rdfs:label "Likeable Association"@en ;
-      rdfs:subClassOf rev:Review , sim:Association ;
+      rdfs:subClassOf sim:Association , rev:Review ;
       vs:term_status "testing"@en .
 
 ao:genre
