@@ -1,4 +1,4 @@
-# Saved by TopBraid on Thu Jul 22 19:57:32 CEST 2010
+# Saved by TopBraid on Thu Jul 22 23:35:07 CEST 2010
 # baseURI: http://purl.org/ontology/ao/core#
 # imports: http://purl.org/dc/elements/1.1/
 # imports: http://purl.org/ontology/similarity/
@@ -19,13 +19,14 @@
 
 ao:   rdf:type owl:Ontology ;
       dc:creator <http://foaf.me/zazi#me> ;
-      dc:date "2010-07-21T18:31:52+01:00"^^xsd:dateTime ;
+      dc:date "2010-07-22T22:35:52+01:00"^^xsd:dateTime ;
       dc:description """The Association Ontology specification provides basic properties 
-for describing a associations to something, e.g. an occasion, a genre ar a mood 
-on/ for the Semantic Web. This document contains a RDF description of the Association Ontology."""@en ;
+for describing specific associations to something, e.g. an occasion, a genre or a mood, and enables furthermore, a mechanism to 
+like/rate and feedback these associations in context to something on/ for the Semantic Web. This document contains a RDF description 
+of the Association Ontology."""@en ;
       dc:title "The Association Ontology"@en ;
       owl:imports dcterms: , <http://purl.org/stuff/rev> , dc: , <http://www.w3.org/2003/06/sw-vocab-status/ns> , sim: ;
-      owl:versionInfo 0.2 .
+      owl:versionInfo 0.21 .
 
 ao:LikeableAssociation
       rdf:type owl:Class ;
@@ -43,10 +44,6 @@ ao:genre
       rdfs:isDefinedBy ao: ;
       rdfs:label "has genre"@en ;
       rdfs:subPropertyOf dcterms:subject ;
-      owl:inverseOf
-              [ rdf:type rdf:Property ;
-                rdfs:label "is genre of"@en
-              ] ;
       vs:term_status "unstable"@en .
 
 ao:included_association
@@ -83,10 +80,6 @@ ao:mood
       rdfs:isDefinedBy ao: ;
       rdfs:label "has mood"@en ;
       rdfs:subPropertyOf dcterms:subject ;
-      owl:inverseOf
-              [ rdf:type rdf:Property ;
-                rdfs:label "is mood of"@en
-              ] ;
       vs:term_status "unstable"@en .
 
 ao:occasion
@@ -96,8 +89,4 @@ ao:occasion
       rdfs:isDefinedBy ao: ;
       rdfs:label "has occassion"@en ;
       rdfs:subPropertyOf dcterms:subject ;
-      owl:inverseOf
-              [ rdf:type rdf:Property ;
-                rdfs:label "is occassion of"@en
-              ] ;
       vs:term_status "unstable"@en .

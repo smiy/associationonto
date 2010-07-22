@@ -1,4 +1,9 @@
 =========================
+Version 0.21 (July 2010)
+=========================
+ * REMOVED: wrongly set owl:inverseOf properties from all rdf:Property typed properties (ao:genre, ao:mood, ao:occasion)
+ 
+=========================
 Version 0.2 (July 2010)
 =========================
  * REMOVED: ao:association - moved to this property to the Similarity Ontology (http://purl.org/ontology/similarity/)
