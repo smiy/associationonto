@@ -16,6 +16,7 @@
 @prefix sim:     <http://purl.org/ontology/similarity/> .
 @prefix vs:      <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
 @prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+@prefix foaf:    <http://xmlns.com/foaf/0.1/> .
 
 ao:   rdf:type owl:Ontology ;
       dc:creator <http://foaf.me/zazi#me> ;
@@ -25,7 +26,7 @@ for describing specific associations to something, e.g. an occasion, a genre or 
 like/rate and feedback these associations in context to something on/ for the Semantic Web. This document contains a RDF description 
 of the Association Ontology."""@en ;
       dc:title "The Association Ontology"@en ;
-      owl:imports dcterms: , <http://purl.org/stuff/rev> , dc: , <http://www.w3.org/2003/06/sw-vocab-status/ns> , sim: ;
+      owl:imports dcterms: , <http://purl.org/stuff/rev> , dc: , <http://www.w3.org/2003/06/sw-vocab-status/ns> , sim: , foaf: ;
       owl:versionInfo 0.21 .
 
 ao:LikeableAssociation
@@ -35,6 +36,7 @@ feedbacking (rev:Feedback), reviewing (e.g. rev:rating) an association statement
 context of something."""@en ;
       rdfs:label "Likeable Association"@en ;
       rdfs:subClassOf sim:Association , rev:Review ;
+      rdfs:isDefinedBy ao: ;
       vs:term_status "testing"@en .
 
 ao:genre
@@ -66,7 +68,7 @@ ao:likeminded
       rdfs:domain sim:Association ;
       rdfs:isDefinedBy ao: ;
       rdfs:label "has likeminded"^^xsd:string ;
-      rdfs:range <http://xmlns.com/foaf/0.1/Agent> ;
+      rdfs:range foaf:Agent ;
       owl:inverseOf
               [ rdf:type owl:ObjectProperty ;
                 rdfs:label "is likeminded of"

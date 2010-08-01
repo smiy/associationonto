@@ -3,14 +3,14 @@
    xmlns:ao="http://purl.org/ontology/ao/core#"
    xmlns:dc="http://purl.org/dc/elements/1.1/"
    xmlns:dcterms="http://purl.org/dc/terms/"
+   xmlns:foaf="http://xmlns.com/foaf/0.1/"
    xmlns:owl="http://www.w3.org/2002/07/owl#"
    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
    xmlns:rev="http://purl.org/stuff/rev#"
    xmlns:sim="http://purl.org/ontology/similarity/"
    xmlns:vs="http://www.w3.org/2003/06/sw-vocab-status/ns#"
-   xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-   xml:base="http://purl.org/ontology/ao/core#">
+   xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
   <owl:Ontology rdf:about="http://purl.org/ontology/ao/core#">
     <dc:creator rdf:resource="http://foaf.me/zazi#me"/>
     <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2010-07-22T22:35:52+01:00</dc:date>
@@ -24,12 +24,14 @@ of the Association Ontology.</dc:description>
     <owl:imports rdf:resource="http://purl.org/ontology/similarity/"/>
     <owl:imports rdf:resource="http://purl.org/stuff/rev"/>
     <owl:imports rdf:resource="http://www.w3.org/2003/06/sw-vocab-status/ns"/>
+    <owl:imports rdf:resource="http://xmlns.com/foaf/0.1/"/>
     <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.21</owl:versionInfo>
   </owl:Ontology>
   <owl:Class rdf:about="http://purl.org/ontology/ao/core#LikeableAssociation">
     <rdfs:comment xml:lang="en">A likeable association. That means this association type is intended to be used for voting (ao:likeminded), 
 feedbacking (rev:Feedback), reviewing (e.g. rev:rating) an association statement (related by ao:included_association) in the 
 context of something.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/ontology/ao/core#"/>
     <rdfs:label xml:lang="en">Likeable Association</rdfs:label>
     <rdfs:subClassOf rdf:resource="http://purl.org/ontology/similarity/Association"/>
     <rdfs:subClassOf rdf:resource="http://purl.org/stuff/rev#Review"/>
