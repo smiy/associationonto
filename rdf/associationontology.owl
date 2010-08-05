@@ -10,7 +10,8 @@
    xmlns:rev="http://purl.org/stuff/rev#"
    xmlns:sim="http://purl.org/ontology/similarity/"
    xmlns:vs="http://www.w3.org/2003/06/sw-vocab-status/ns#"
-   xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
+   xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+   xml:base="http://purl.org/ontology/ao/core#">
   <owl:Ontology rdf:about="http://purl.org/ontology/ao/core#">
     <dc:creator rdf:resource="http://foaf.me/zazi#me"/>
     <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2010-07-22T22:35:52+01:00</dc:date>
