@@ -1,42 +1,54 @@
-# Saved by TopBraid on Thu Jul 22 23:35:07 CEST 2010
+# Saved by TopBraid on Fri Aug 06 16:36:04 CEST 2010
 # baseURI: http://purl.org/ontology/ao/core#
 # imports: http://purl.org/dc/elements/1.1/
 # imports: http://purl.org/ontology/similarity/
 # imports: http://www.w3.org/2003/06/sw-vocab-status/ns
 # imports: http://purl.org/stuff/rev
+# imports: http://www.w3.org/2004/03/trix/rdfg-1/
+# imports: http://xmlns.com/foaf/0.1/
 # imports: http://purl.org/dc/terms/
 
 @prefix ao:      <http://purl.org/ontology/ao/core#> .
 @prefix dc:      <http://purl.org/dc/elements/1.1/> .
 @prefix dcterms:  <http://purl.org/dc/terms/> .
+@prefix foaf:    <http://xmlns.com/foaf/0.1/> .
 @prefix owl:     <http://www.w3.org/2002/07/owl#> .
 @prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfg:    <http://www.w3.org/2004/03/trix/rdfg-1/> .
 @prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix rev:     <http://purl.org/stuff/rev#> .
 @prefix sim:     <http://purl.org/ontology/similarity/> .
 @prefix vs:      <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
 @prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
-@prefix foaf:    <http://xmlns.com/foaf/0.1/> .
 
 ao:   rdf:type owl:Ontology ;
       dc:creator <http://foaf.me/zazi#me> ;
-      dc:date "2010-07-22T22:35:52+01:00"^^xsd:dateTime ;
+      dc:date "2010-08-06T15:35:52+01:00"^^xsd:dateTime ;
       dc:description """The Association Ontology specification provides basic properties 
 for describing specific associations to something, e.g. an occasion, a genre or a mood, and enables furthermore, a mechanism to 
 like/rate and feedback these associations in context to something on/ for the Semantic Web. This document contains a RDF description 
 of the Association Ontology."""@en ;
       dc:title "The Association Ontology"@en ;
-      owl:imports dcterms: , <http://purl.org/stuff/rev> , dc: , <http://www.w3.org/2003/06/sw-vocab-status/ns> , sim: , foaf: ;
-      owl:versionInfo 0.21 .
+      owl:imports rdfg: , dcterms: , <http://purl.org/stuff/rev> , dc: , <http://www.w3.org/2003/06/sw-vocab-status/ns> , sim: , foaf: ;
+      owl:versionInfo 0.3 .
 
 ao:LikeableAssociation
       rdf:type owl:Class ;
       rdfs:comment """A likeable association. That means this association type is intended to be used for voting (ao:likeminded), 
 feedbacking (rev:Feedback), reviewing (e.g. rev:rating) an association statement (related by ao:included_association) in the 
 context of something."""@en ;
+      rdfs:isDefinedBy ao: ;
       rdfs:label "Likeable Association"@en ;
       rdfs:subClassOf sim:Association , rev:Review ;
+      vs:term_status "testing"@en .
+
+ao:associates
+      rdf:type rdf:Property , owl:ObjectProperty ;
+      rdfs:comment "Related the graph of the association statement, which describes the subjective associations."@en ;
+      rdfs:domain sim:Association ;
       rdfs:isDefinedBy ao: ;
+      rdfs:label "associates"@en ;
+      rdfs:range rdfg:Graph ;
       vs:term_status "testing"@en .
 
 ao:genre
@@ -92,3 +104,12 @@ ao:occasion
       rdfs:label "has occassion"@en ;
       rdfs:subPropertyOf dcterms:subject ;
       vs:term_status "unstable"@en .
+
+ao:substitution
+      rdf:type rdf:Property ;
+      rdfs:comment "A class instances would be substituted by another class instances to enable statements, which are independent from a specific class instance."^^xsd:string ;
+      rdfs:domain owl:Thing ;
+      rdfs:isDefinedBy ao: ;
+      rdfs:label "substitution"^^xsd:string ;
+      rdfs:range owl:Thing ;
+      vs:term_status "testing"^^xsd:string .

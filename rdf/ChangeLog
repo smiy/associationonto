@@ -1,4 +1,10 @@
 =========================
+Version 0.3 (July 2010)
+=========================
+ * ADDED: ao:associates - relates the graph of the association statement, which describes the subjective associations
+ * ADDED: ao:substitution - a class instances would be substituted by another class instances to enable statements, which are independent from a specific class instance
+
+=========================
 Version 0.21 (July 2010)
 =========================
  * REMOVED: wrongly set owl:inverseOf properties from all rdf:Property typed properties (ao:genre, ao:mood, ao:occasion)

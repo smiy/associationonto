@@ -1,0 +1,77 @@
+# Saved by TopBraid on Thu Aug 05 12:24:38 CEST 2010
+# baseURI: http://example.org/
+
+@prefix ao:      <http://purl.org/ontology/ao/core#> .
+@prefix bibo:    <http://purl.org/ontology/bibo/> .
+@prefix dc:      <http://purl.org/dc/elements/1.1/> .
+@prefix ex:      <http://example.org/> .
+@prefix mo:      <http://purl.org/ontology/mo/> .
+@prefix olo:     <http://purl.org/ontology/olo/core#> .
+@prefix pbo:     <http://purl.org/ontology/pbo/core#> .
+@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sim:     <http://purl.org/ontology/similarity/> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfg:	<http://www.w3.org/2004/03/trix/rdfg-1/> .
+
+ex:BobsAssociation
+      rdf:type sim:Association ;
+      dc:creator <http://foaf.me/zazi#me> ;
+      ao:associates {
+      		ex:AssociationSubject ao:genre ex:Funk ;
+      			ao:mood "happy"^^xsd:string ;
+      			ao:occasion "good feeling music"^^xsd:string . } .
+
+ex:BobsAssociationInUse
+      rdf:type ao:LikeableAssociation ;
+      ex:AssociationSubject ao:substitution ex:FunkyPlaylist ;
+      ao:included_association
+              ex:BobsAssociation ;
+      ao:likeminded <http://moustaki.org/foaf.rdf#moustaki> .
+
+ex:Funk
+      rdf:type mo:Genre .
+
+ex:FunkyPlaylist
+      rdf:type pbo:Playlist ;
+      dc:creator <http://foaf.me/zazi#me> ;
+      dc:description "A playlist full of funky legends"^^xsd:string ;
+      dc:title "Funky Playlist"^^xsd:string ;
+      olo:length 2 ;
+      pbo:playlist_slot
+              [ a pbo:PlaylistSlot ;
+                olo:index 2 ;
+                pbo:playlist_item ex:GoodFoot
+              ] ;
+      pbo:playlist_slot
+              [ a pbo:PlaylistSlot ;
+                olo:index 1 ;
+                pbo:playlist_item ex:SexMachine
+              ] ;
+      sim:association ex:BobsAssociationInUse , ex:ZazisAssociation .
+
+ex:GoodFoot
+      rdf:type mo:Track ;
+      dc:title "Good Foot"^^xsd:string .
+
+ex:SexMachine
+      rdf:type mo:Track ;
+      dc:creator <http://dbpedia.org/resource/James_Brown> ;
+      dc:title "Sex Machine"^^xsd:string .
+
+ex:ZazisAssociation
+      rdf:type sim:Association ;
+      dc:creator <http://foaf.me/zazi#me> ;
+      ao:associates {
+      		ex:FunkyPlaylist ao:genre "Funk"^^xsd:string ;
+      			ao:mood "party"^^xsd:string ;
+      			ao:occasion "my birthday party 2008"^^xsd:string . } .
+
+<http://smiy.sourceforge.net/ao/examples/N3/playlist_annotation_-_example_-_with_graphs.n3>
+      rdf:type bibo:Document ;
+      rdfs:seeAlso <http://purl.org/ontology/pbo/playbackontology.html> ;
+      dc:creator <http://foaf.me/zazi#me> ;
+      dc:date "2010-07-21T11:54:52+01:00"^^xsd:dateTime ;
+      dc:description """This document includes an example of a music playlist, created mainly with concepts from the Play Back 
+Ontology, Association Ontology, Similarity Ontology and Music Ontology."""@en ;
+      dc:title "Playlist Example"@en .

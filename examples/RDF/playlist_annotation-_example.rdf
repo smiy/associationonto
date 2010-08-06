@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+   xmlns:ao="http://purl.org/ontology/ao/core#"
+   xmlns:bibo="http://purl.org/ontology/bibo/"
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:ex="http://example.org/"
+   xmlns:mo="http://purl.org/ontology/mo/"
+   xmlns:olo="http://purl.org/ontology/olo/core#"
+   xmlns:pbo="http://purl.org/ontology/pbo/core#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+   xmlns:sim="http://purl.org/ontology/similarity/"
+   xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+   xml:base="http://example.org/">
+  <sim:Association rdf:about="http://example.org/BobsAssociation">
+    <dc:creator rdf:resource="http://foaf.me/zazi#me"/>
+    <ao:genre rdf:resource="http://example.org/Funk"/>
+    <ao:mood rdf:datatype="http://www.w3.org/2001/XMLSchema#string">happy</ao:mood>
+    <ao:occasion rdf:datatype="http://www.w3.org/2001/XMLSchema#string">good feeling music</ao:occasion>
+  </sim:Association>
+  <ao:LikeableAssociation rdf:about="http://example.org/BobsAssociationInUse">
+    <ao:included_association rdf:resource="http://example.org/BobsAssociation"/>
+    <ao:likeminded rdf:resource="http://moustaki.org/foaf.rdf#moustaki"/>
+  </ao:LikeableAssociation>
+  <mo:Genre rdf:about="http://example.org/Funk"/>
+  <pbo:Playlist rdf:about="http://example.org/FunkyPlaylist">
+    <dc:creator rdf:resource="http://foaf.me/zazi#me"/>
+    <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A playlist full of funky legends</dc:description>
+    <dc:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Funky Playlist</dc:title>
+    <olo:length rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</olo:length>
+    <pbo:playlist_slot>
+      <pbo:PlaylistSlot>
+        <olo:index rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</olo:index>
+        <pbo:playlist_item rdf:resource="http://example.org/GoodFoot"/>
+      </pbo:PlaylistSlot>
+    </pbo:playlist_slot>
+    <pbo:playlist_slot>
+      <pbo:PlaylistSlot>
+        <olo:index rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</olo:index>
+        <pbo:playlist_item rdf:resource="http://example.org/SexMachine"/>
+      </pbo:PlaylistSlot>
+    </pbo:playlist_slot>
+    <sim:association rdf:resource="http://example.org/BobsAssociationInUse"/>
+    <sim:association rdf:resource="http://example.org/ZazisAssociation"/>
+  </pbo:Playlist>
+  <mo:Track rdf:about="http://example.org/GoodFoot">
+    <dc:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Good Foot</dc:title>
+  </mo:Track>
+  <mo:Track rdf:about="http://example.org/SexMachine">
+    <dc:creator rdf:resource="http://dbpedia.org/resource/James_Brown"/>
+    <dc:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sex Machine</dc:title>
+  </mo:Track>
+  <sim:Association rdf:about="http://example.org/ZazisAssociation">
+    <dc:creator rdf:resource="http://foaf.me/zazi#me"/>
+    <ao:genre rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Funk</ao:genre>
+    <ao:mood rdf:datatype="http://www.w3.org/2001/XMLSchema#string">party</ao:mood>
+    <ao:occasion rdf:datatype="http://www.w3.org/2001/XMLSchema#string">my birthday party 2008</ao:occasion>
+  </sim:Association>
+  <bibo:Document rdf:about="http://smiy.sourceforge.net/pbo/examples/N3/playlist_-_example.n3">
+    <dc:creator rdf:resource="http://foaf.me/zazi#me"/>
+    <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2010-07-21T11:54:52+01:00</dc:date>
+    <dc:description xml:lang="en">This document includes an example of a music playlist, created mainly with concepts from the Play Back 
+Ontology, Association Ontology, Similarity Ontology and Music Ontology.</dc:description>
+    <dc:title xml:lang="en">Playlist Example</dc:title>
+    <rdfs:seeAlso rdf:resource="http://purl.org/ontology/pbo/playbackontology.html"/>
+  </bibo:Document>
+</rdf:RDF>
