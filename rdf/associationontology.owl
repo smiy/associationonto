@@ -14,6 +14,7 @@
    xml:base="http://purl.org/ontology/ao/core#">
   <owl:Ontology rdf:about="http://purl.org/ontology/ao/core#">
     <dc:creator rdf:resource="http://foaf.me/zazi#me"/>
+    <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">&lt;http://tobyinkster.co.uk/#i&gt;</dc:creator>
     <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2010-08-11T15:34:52+01:00</dc:date>
     <dc:description xml:lang="en">The Association Ontology specification provides basic properties 
 for describing specific associations to something, e.g. a context, an occasion, a genre or a mood, and enables furthermore, a mechanism to 

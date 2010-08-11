@@ -1,4 +1,4 @@
-# Saved by TopBraid on Wed Aug 11 16:35:08 CEST 2010
+# Saved by TopBraid on Wed Aug 11 19:26:10 CEST 2010
 # baseURI: http://purl.org/ontology/ao/core#
 # imports: http://purl.org/dc/elements/1.1/
 # imports: http://purl.org/ontology/similarity/
@@ -20,7 +20,7 @@
 @prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
 
 ao:   rdf:type owl:Ontology ;
-      dc:creator <http://foaf.me/zazi#me> ;
+      dc:creator <http://foaf.me/zazi#me> , "<http://tobyinkster.co.uk/#i>"^^xsd:string ;
       dc:date "2010-08-11T15:34:52+01:00"^^xsd:dateTime ;
       dc:description """The Association Ontology specification provides basic properties 
 for describing specific associations to something, e.g. a context, an occasion, a genre or a mood, and enables furthermore, a mechanism to 
@@ -37,7 +37,7 @@ feedbacking (rev:Feedback), reviewing (e.g. rev:rating) an association statement
 context of something."""@en ;
       rdfs:isDefinedBy ao: ;
       rdfs:label "Likeable Association"@en ;
-      rdfs:subClassOf rev:Review , sim:Association ;
+      rdfs:subClassOf sim:Association , rev:Review ;
       vs:term_status "testing"@en .
 
 ao:activity
