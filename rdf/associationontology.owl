@@ -56,7 +56,7 @@ context of something.</rdfs:comment>
     <vs:term_status xml:lang="en">testing</vs:term_status>
   </rdf:Property>
   <rdf:Property rdf:about="http://purl.org/ontology/ao/core#context">
-    <rdfs:comment xml:lang="en">A property to associate any context to an individual, e.g. a location, a time or an activity. Hence, this property is intended that sub properties should be created from it.</rdfs:comment>
+    <rdfs:comment xml:lang="en">A property to associate any environmental context to an individual, e.g. a location, a time or an activity. Hence, this property is intended that sub properties should be created from it.</rdfs:comment>
     <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
     <rdfs:isDefinedBy rdf:resource="http://purl.org/ontology/ao/core#"/>
     <rdfs:label xml:lang="en">has context</rdfs:label>
@@ -135,22 +135,22 @@ in a specific context.</rdfs:comment>
     <owl:equivalentProperty rdf:resource="http://purl.org/dc/elements/1.1/date"/>
     <vs:term_status xml:lang="en">testing</vs:term_status>
   </rdf:Property>
-  <owl:ObjectProperty rdf:about="http://purl.org/ontology/ao/core#used_application">
-    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  <rdf:Property rdf:about="http://purl.org/ontology/ao/core#used_application">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
     <rdfs:comment xml:lang="en">An application that is related to an event, e.g. a iTunes to a play back event of a music track.</rdfs:comment>
     <rdfs:isDefinedBy rdf:resource="http://purl.org/ontology/ao/core#"/>
     <rdfs:label xml:lang="en">has used application</rdfs:label>
     <rdfs:subPropertyOf rdf:resource="http://purl.org/NET/c4dm/event.owl#factor"/>
     <rdfs:subPropertyOf rdf:resource="http://purl.org/ontology/ao/core#application"/>
     <vs:term_status xml:lang="en">unstable</vs:term_status>
-  </owl:ObjectProperty>
-  <owl:ObjectProperty rdf:about="http://purl.org/ontology/ao/core#used_device">
-    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://purl.org/ontology/ao/core#used_device">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
     <rdfs:comment xml:lang="en">A device that is related to an event, e.g. a MP3 player to a play back event of a music track.</rdfs:comment>
     <rdfs:isDefinedBy rdf:resource="http://purl.org/ontology/ao/core#"/>
     <rdfs:label xml:lang="en">has used device</rdfs:label>
     <rdfs:subPropertyOf rdf:resource="http://purl.org/NET/c4dm/event.owl#factor"/>
     <rdfs:subPropertyOf rdf:resource="http://purl.org/ontology/ao/core#device"/>
     <vs:term_status xml:lang="en">unstable</vs:term_status>
-  </owl:ObjectProperty>
+  </rdf:Property>
 </rdf:RDF>

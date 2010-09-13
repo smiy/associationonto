@@ -1,4 +1,4 @@
-# Saved by TopBraid on Mon Sep 13 15:06:03 CEST 2010
+# Saved by TopBraid on Mon Sep 13 16:27:09 CEST 2010
 # baseURI: http://purl.org/ontology/ao/core#
 # imports: http://purl.org/NET/c4dm/event.owl
 # imports: http://purl.org/dc/elements/1.1/
@@ -22,7 +22,7 @@
 @prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
 
 ao:   rdf:type owl:Ontology ;
-      dc:creator <http://foaf.me/zazi#me> , <http://tobyinkster.co.uk/#i>;
+      dc:creator <http://foaf.me/zazi#me> , <http://tobyinkster.co.uk/#i> ;
       dc:date "2010-09-13T13:59:52+01:00"^^xsd:dateTime ;
       dc:description """The Association Ontology specification provides basic properties 
 for describing specific associations to something, e.g. a context, an occasion, a genre or a mood, and enables furthermore, a mechanism to 
@@ -39,7 +39,7 @@ feedbacking (rev:Feedback), reviewing (e.g. rev:rating) an association statement
 context of something."""@en ;
       rdfs:isDefinedBy ao: ;
       rdfs:label "Likeable Association"@en ;
-      rdfs:subClassOf sim:Association , rev:Review ;
+      rdfs:subClassOf rev:Review , sim:Association ;
       vs:term_status "testing"@en .
 
 ao:activity
@@ -60,7 +60,7 @@ ao:application
 
 ao:context
       rdf:type rdf:Property ;
-      rdfs:comment "A property to associate any context to an individual, e.g. a location, a time or an activity. Hence, this property is intended that sub properties should be created from it."@en ;
+      rdfs:comment "A property to associate any environmental context to an individual, e.g. a location, a time or an activity. Hence, this property is intended that sub properties should be created from it."@en ;
       rdfs:domain owl:Thing ;
       rdfs:isDefinedBy ao: ;
       rdfs:label "has context"@en ;
@@ -147,17 +147,17 @@ ao:time
       vs:term_status "testing"@en .
 
 ao:used_application
-      rdf:type owl:ObjectProperty , rdf:Property ;
+      rdf:type rdf:Property , owl:ObjectProperty ;
       rdfs:comment "An application that is related to an event, e.g. a iTunes to a play back event of a music track."@en ;
       rdfs:isDefinedBy ao: ;
       rdfs:label "has used application"@en ;
-      rdfs:subPropertyOf ao:application , event:factor ;
+      rdfs:subPropertyOf event:factor , ao:application ;
       vs:term_status "unstable"@en .
 
 ao:used_device
-      rdf:type owl:ObjectProperty , rdf:Property ;
+      rdf:type rdf:Property , owl:ObjectProperty ;
       rdfs:comment "A device that is related to an event, e.g. a MP3 player to a play back event of a music track."@en ;
       rdfs:isDefinedBy ao: ;
       rdfs:label "has used device"@en ;
-      rdfs:subPropertyOf ao:device , event:factor ;
+      rdfs:subPropertyOf event:factor , ao:device ;
       vs:term_status "unstable"@en .
