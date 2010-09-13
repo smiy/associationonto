@@ -14,6 +14,7 @@
    xml:base="http://purl.org/ontology/ao/core#">
   <owl:Ontology rdf:about="http://purl.org/ontology/ao/core#">
     <dc:creator rdf:resource="http://foaf.me/zazi#me"/>
+    <dc:creator rdf:resource="http://tobyinkster.co.uk/#i"/>
     <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2010-08-11T15:34:52+01:00</dc:date>
     <dc:description xml:lang="en">The Association Ontology specification provides basic properties 
 for describing specific associations to something, e.g. a context, an occasion, a genre or a mood, and enables furthermore, a mechanism to 
@@ -39,6 +40,7 @@ context of something.</rdfs:comment>
     <vs:term_status xml:lang="en">testing</vs:term_status>
   </owl:Class>
   <rdf:Property rdf:about="http://purl.org/ontology/ao/core#activity">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
     <rdfs:comment xml:lang="en">An activity, which is associated to an individual, e.g. dancing, sleeping, driving.</rdfs:comment>
     <rdfs:isDefinedBy rdf:resource="http://purl.org/ontology/ao/core#"/>
     <rdfs:label xml:lang="en">activity</rdfs:label>
@@ -46,6 +48,7 @@ context of something.</rdfs:comment>
     <vs:term_status xml:lang="en">testing</vs:term_status>
   </rdf:Property>
   <rdf:Property rdf:about="http://purl.org/ontology/ao/core#context">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
     <rdfs:comment xml:lang="en">A property to associate any context to an individual, e.g. a location, a time or an activity. Hence, this property is intended that sub properties should be created from it.</rdfs:comment>
     <rdfs:isDefinedBy rdf:resource="http://purl.org/ontology/ao/core#"/>
     <rdfs:label xml:lang="en">has context</rdfs:label>
