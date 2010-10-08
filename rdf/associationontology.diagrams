@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="windows-1252"?>
 <rdf:RDF
     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
     xmlns:cd="http://www.topbraidcomposer.org/2006/04/02/ClassDiagrams.owl#"
@@ -10,9 +11,9 @@
         <cd:width rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
         >213</cd:width>
         <cd:y rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-        >438</cd:y>
+        >805</cd:y>
         <cd:x rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-        >403</cd:x>
+        >291</cd:x>
         <cd:class rdf:resource="http://purl.org/ontology/ao/core#LikeableAssociation"/>
       </cd:URINode>
     </cd:nodes>
@@ -23,35 +24,35 @@
         <cd:width rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
         >242</cd:width>
         <cd:y rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-        >207</cd:y>
+        >574</cd:y>
         <cd:x rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-        >228</cd:x>
+        >116</cd:x>
         <cd:class rdf:resource="http://purl.org/stuff/rev#Review"/>
       </cd:URINode>
     </cd:nodes>
     <cd:nodes>
       <cd:URINode>
         <cd:height rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-        >30</cd:height>
+        >272</cd:height>
         <cd:width rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-        >131</cd:width>
+        >245</cd:width>
         <cd:y rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-        >262</cd:y>
+        >509</cd:y>
         <cd:x rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-        >1001</cd:x>
+        >903</cd:x>
         <cd:class rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
       </cd:URINode>
     </cd:nodes>
     <cd:nodes>
       <cd:URINode>
         <cd:height rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-        >104</cd:height>
+        >235</cd:height>
         <cd:width rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
         >248</cd:width>
         <cd:y rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-        >16</cd:y>
+        >229</cd:y>
         <cd:x rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-        >596</cd:x>
+        >484</cd:x>
         <cd:class rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
       </cd:URINode>
     </cd:nodes>
@@ -62,10 +63,23 @@
         <cd:width rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
         >302</cd:width>
         <cd:y rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-        >178</cd:y>
+        >545</cd:y>
         <cd:x rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-        >573</cd:x>
+        >461</cd:x>
         <cd:class rdf:resource="http://purl.org/ontology/similarity/Association"/>
+      </cd:URINode>
+    </cd:nodes>
+    <cd:nodes>
+      <cd:URINode>
+        <cd:height rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >179</cd:height>
+        <cd:width rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >201</cd:width>
+        <cd:y rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >258</cd:y>
+        <cd:x rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >925</cd:x>
+        <cd:class rdf:resource="http://purl.org/NET/c4dm/event.owl#Event"/>
       </cd:URINode>
     </cd:nodes>
     <cd:selectedResource rdf:resource="http://purl.org/ontology/similarity/Association"/>

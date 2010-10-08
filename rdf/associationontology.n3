@@ -1,4 +1,4 @@
-# Saved by TopBraid on Mon Sep 13 16:27:09 CEST 2010
+# Saved by TopBraid on Fri Oct 08 18:21:17 CEST 2010
 # baseURI: http://purl.org/ontology/ao/core#
 # imports: http://purl.org/NET/c4dm/event.owl
 # imports: http://purl.org/dc/elements/1.1/
@@ -39,7 +39,7 @@ feedbacking (rev:Feedback), reviewing (e.g. rev:rating) an association statement
 context of something."""@en ;
       rdfs:isDefinedBy ao: ;
       rdfs:label "Likeable Association"@en ;
-      rdfs:subClassOf rev:Review , sim:Association ;
+      rdfs:subClassOf sim:Association , rev:Review ;
       vs:term_status "testing"@en .
 
 ao:activity
@@ -147,17 +147,17 @@ ao:time
       vs:term_status "testing"@en .
 
 ao:used_application
-      rdf:type rdf:Property , owl:ObjectProperty ;
+      rdf:type owl:ObjectProperty , rdf:Property ;
       rdfs:comment "An application that is related to an event, e.g. a iTunes to a play back event of a music track."@en ;
       rdfs:isDefinedBy ao: ;
       rdfs:label "has used application"@en ;
-      rdfs:subPropertyOf event:factor , ao:application ;
+      rdfs:subPropertyOf ao:application , event:factor ;
       vs:term_status "unstable"@en .
 
 ao:used_device
-      rdf:type rdf:Property , owl:ObjectProperty ;
+      rdf:type owl:ObjectProperty , rdf:Property ;
       rdfs:comment "A device that is related to an event, e.g. a MP3 player to a play back event of a music track."@en ;
       rdfs:isDefinedBy ao: ;
       rdfs:label "has used device"@en ;
-      rdfs:subPropertyOf event:factor , ao:device ;
+      rdfs:subPropertyOf ao:device , event:factor ;
       vs:term_status "unstable"@en .
